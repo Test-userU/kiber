@@ -50,8 +50,7 @@ h1 { font-family: ‘Unbounded’, sans-serif; font-weight: 900; font-size: clam
 .quiz-option.correct { border-color: var(–success); background: rgba(0,201,122,0.08); color: var(–success); }
 .quiz-option.wrong { border-color: var(–error); background: rgba(255,60,110,0.08); color: var(–error); }
 
-.
-[24.03.2026 21:44] ᅠㅤᅠㅤᅠㅤ ᅠㅤ ᅠㅤ: option-letter { width: 28px; height: 28px; border-radius: 8px; background: var(–border); color: var(–muted); font-family: ‘Unbounded’, sans-serif; font-size: 0.7rem; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.2s; }
+option-letter { width: 28px; height: 28px; border-radius: 8px; background: var(–border); color: var(–muted); font-family: ‘Unbounded’, sans-serif; font-size: 0.7rem; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.2s; }
 .quiz-option.correct .option-letter { background: var(–success); color: #000; }
 .quiz-option.wrong .option-letter { background: var(–error); color: #fff; }
 
@@ -111,7 +110,7 @@ footer span { color: var(–accent); }
     <div id="quizCard">
       <div class="quiz-meta">
         <span class="quiz-counter" id="quizCounter">Вопрос 1 / 10</span>
-[24.03.2026 21:44] ᅠㅤᅠㅤᅠㅤ ᅠㅤ ᅠㅤ: <span class="quiz-score-badge">⚡ Очки: <span id="scoreDisplay">0</span></span>
+          <span class="quiz-score-badge">⚡ Очки: <span id="scoreDisplay">0</span></span>
       </div>
       <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="progressFill" style="width:10%"></div></div>
       <div class="quiz-card">
@@ -193,7 +192,7 @@ function selectAnswer(idx, btn) {
     score++;
     document.getElementById('scoreDisplay').textContent = score;
     feedback.className = 'quiz-feedback correct-fb show';
-[24.03.2026 21:44] ᅠㅤᅠㅤᅠㅤ ᅠㅤ ᅠㅤ: feedback.innerHTML = q.explanation;
+ ᅠㅤᅠㅤᅠㅤ ᅠㅤ ᅠㅤ: feedback.innerHTML = q.explanation;
     buttons[q.correct].classList.add('correct');
   } else {
     btn.classList.add('wrong');
