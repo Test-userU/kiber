@@ -1,0 +1,188 @@
+[24.03.2026 20:33] ᅠㅤᅠㅤᅠㅤ ᅠㅤ ᅠㅤ: <!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>КиберЩит — Защити себя в сети</title>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Onest:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0e1a;
+    --surface: #111827;
+    --card: #161f30;
+    --border: #1e2d45;
+    --accent: #00e5ff;
+    --accent2: #ff3c6e;
+    --text: #e8edf5;
+    --muted: #6b7a99;
+    --success: #00c97a;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: 'Onest', sans-serif; overflow-x: hidden; }
+
+nav {
+position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+display: flex; align-items: center; justify-content: space-between;
+padding: 1rem 2.5rem;
+background: rgba(10,14,26,0.9); backdrop-filter: blur(12px);
+border-bottom: 1px solid var(–border);
+}
+.nav-logo { font-family: ‘Unbounded’, sans-serif; font-weight: 900; font-size: 1.1rem; color: var(–accent); text-decoration: none; }
+.nav-logo span { color: var(–accent2); }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { color: var(–muted); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
+.nav-links a:hover { color: var(–accent); }
+
+#hero {
+min-height: 100vh; display: flex; align-items: center; justify-content: center;
+position: relative; padding: 6rem 2rem 4rem; text-align: center; overflow: hidden;
+}
+.hero-grid {
+position: absolute; inset: 0;
+background-image: linear-gradient(rgba(0,229,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,229,255,0.04) 1px, transparent 1px);
+background-size: 60px 60px;
+mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 40%, transparent 100%);
+}
+.hero-glow { position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(0,229,255,0.08) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none; }
+.hero-glow2 { position: absolute; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(255,60,110,0.06) 0%, transparent 70%); top: 30%; left: 70%; pointer-events: none; }
+
+.hero-content { position: relative; z-index: 1; max-width: 820px; }
+.hero-badge {
+display: inline-flex; align-items: center; gap: 0.5rem;
+background: rgba(0,229,255,0.08); border: 1px solid rgba(0,229,255,0.2);
+color: var(–accent); font-size: 0.8rem; font-weight: 500;
+padding: 0.4rem 1rem; border-radius: 999px; margin-bottom: 2rem;
+animation: fadeUp 0.6s ease both;
+}
+.hero-badge::before { content: ‘’; width: 6px; height: 6px; border-radius: 50%; background: var(–accent); animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.8)} }
+
+h1 { font-family: ‘Unbounded’, sans-serif; font-weight: 900; font-size: clamp(2.5rem,7vw,5rem); line-height: 1.0; letter-spacing: -0.03em; margin-bottom: 1.5rem; animation: fadeUp 0.7s 0.1s ease both; }
+h1 .line-accent { color: var(–accent); }
+h1 .line-danger { color: var(–accent2); }
+
+.hero-sub { font-size: 1.1rem; color: var(–muted); max-width: 560px; margin: 0 auto 3rem; font-weight: 300; animation: fadeUp 0.7s 0.2s ease both; }
+.hero-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; animation: fadeUp 0.7s 0.3s ease both; }
+
+.btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.9rem 2rem; border-radius: 10px; font-size: 0.95rem; font-weight: 500; cursor: pointer; transition: all 0.2s; text-decoration: none; border: none; font-family: ‘Onest’, sans-serif; }
+.btn-primary { background: var(–accent); color: #000; }
+.btn-primary:hover { background: #33eaff; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,229,255,0.3); }
+.btn-outline { background: transparent; color: var(–text); border: 1px solid var(–border); }
+.
+[24.03.2026 20:33] ᅠㅤᅠㅤᅠㅤ ᅠㅤ ᅠㅤ: btn-outline:hover { border-color: var(–accent); color: var(–accent); transform: translateY(-2px); }
+
+@keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+
+.stats-bar { background: var(–surface); border-top: 1px solid var(–border); border-bottom: 1px solid var(–border); padding: 2rem; display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap; }
+.stat-item { text-align: center; }
+.stat-num { font-family: ‘Unbounded’, sans-serif; font-size: 2rem; font-weight: 900; color: var(–accent); display: block; }
+.stat-label { font-size: 0.8rem; color: var(–muted); margin-top: 0.25rem; }
+
+section { padding: 5rem 2rem; }
+.section-inner { max-width: 1100px; margin: 0 auto; }
+.section-label { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(–accent); margin-bottom: 0.75rem; }
+h2 { font-family: ‘Unbounded’, sans-serif; font-size: clamp(1.8rem,4vw,2.8rem); font-weight: 900; letter-spacing: -0.03em; margin-bottom: 1rem; line-height: 1.1; }
+.section-desc { color: var(–muted); max-width: 560px; margin-bottom: 3rem; font-size: 1rem; font-weight: 300; }
+
+.threats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+.threat-card { background: var(–card); border: 1px solid var(–border); border-radius: 16px; padding: 1.75rem; position: relative; overflow: hidden; transition: all 0.3s; }
+.threat-card::before { content: ‘’; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(–card-accent, var(–accent)); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
+.threat-card:hover { transform: translateY(-4px); border-color: rgba(0,229,255,0.2); }
+.threat-card:hover::before { transform: scaleX(1); }
+.threat-icon { font-size: 2rem; margin-bottom: 1rem; display: block; }
+.threat-title { font-family: ‘Unbounded’, sans-serif; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.75rem; }
+.threat-desc { font-size: 0.875rem; color: var(–muted); line-height: 1.6; }
+
+.cta-section { background: var(–surface); border-top: 1px solid var(–border); border-bottom: 1px solid var(–border); padding: 5rem 2rem; text-align: center; }
+.cta-inner { max-width: 600px; margin: 0 auto; }
+.cta-inner h2 { margin-bottom: 1rem; }
+.cta-inner p { color: var(–muted); margin-bottom: 2.5rem; font-weight: 300; }
+.cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+footer { background: var(–surface); border-top: 1px solid var(–border); padding: 2.5rem; text-align: center; font-size: 0.82rem; color: var(–muted); }
+footer span { color: var(–accent); }
+
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 600px) { nav { padding: 1rem 1.25rem; } .nav-links { display: none; } .stats-bar { gap: 2rem; } }
+</style>
+
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Кибер<span>Щит</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="tips.html">Защита</a></li>
+    <li><a href="quiz.html">Тест</a></li>
+  </ul>
+</nav>
+
+<section id="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🛡️ Проект по информатике 2025</div>
+    <h1>
+      <span class="line-accent">Кибер</span>преступность:<br>
+      <span class="line-danger">знай врага</span><br>в лицо
+    </h1>
+    <p class="hero-sub">Каждый день миллионы людей становятся жертвами хакеров и мошенников. Узнай, как они работают — и как защитить себя.</p>
+    <div class="hero-ctas">
+      <a href="quiz.html" class="btn btn-primary">🎯 Пройти тест</a>
+      <a href="tips.html" class="btn btn-outline">🔒 Советы по защите</a>
+    </div>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stat-item reveal"><span class="stat-num">₽8 трлн</span><div class="stat-label">ущерб от киберпреступлений в мире ежегодно</div></div>
+[24.03.2026 20:33] ᅠㅤᅠㅤᅠㅤ ᅠㅤ ᅠㅤ: <div class="stat-item reveal"><span class="stat-num">61%</span><div class="stat-label">пользователей используют одинаковые пароли</div></div>
+  <div class="stat-item reveal"><span class="stat-num">1 из 3</span><div class="stat-label">человек получает фишинговые письма каждый день</div></div>
+  <div class="stat-item reveal"><span class="stat-num">10 лет</span><div class="stat-label">максимальный срок по ст. 272–274 УК РФ</div></div>
+</div>
+
+<section id="threats">
+  <div class="section-inner">
+    <p class="section-label reveal">Основные угрозы</p>
+    <h2 class="reveal">Как хакеры<br>могут атаковать тебя</h2>
+    <p class="section-desc reveal">Злоумышленники используют разные методы. Вот самые распространённые из них.</p>
+    <div class="threats-grid">
+      <div class="threat-card reveal" style="--card-accent:#00e5ff"><span class="threat-icon">🦠</span><div class="threat-title">Вирусы и вредоносное ПО</div><p class="threat-desc">Программы, которые тайно проникают на устройство через заражённые файлы, пиратские игры или поддельные приложения.</p></div>
+      <div class="threat-card reveal" style="--card-accent:#ff3c6e"><span class="threat-icon">🎣</span><div class="threat-title">Фишинг</div><p class="threat-desc">Поддельные письма и сайты, имитирующие банки или госуслуги, с целью украсть пароль или данные карты.</p></div>
+      <div class="threat-card reveal" style="--card-accent:#7c3aed"><span class="threat-icon">🔓</span><div class="threat-title">Взлом аккаунтов</div><p class="threat-desc">Хакеры подбирают пароли или используют утечки данных. Особенно опасно, если у тебя один пароль везде.</p></div>
+      <div class="threat-card reveal" style="--card-accent:#f59e0b"><span class="threat-icon">📞</span><div class="threat-title">Социальная инженерия</div><p class="threat-desc">Мошенник звонит, представляется сотрудником банка и просит сообщить код из СМС или перевести деньги.</p></div>
+      <div class="threat-card reveal" style="--card-accent:#10b981"><span class="threat-icon">📡</span><div class="threat-title">Опасный Wi-Fi</div><p class="threat-desc">В публичных сетях хакер может перехватить твой трафик — пароли, переписку, данные карт.</p></div>
+      <div class="threat-card reveal" style="--card-accent:#ec4899"><span class="threat-icon">💰</span><div class="threat-title">Программы-вымогатели</div><p class="threat-desc">Ransomware шифрует все файлы и требует выкуп. Распространяется через вложения в письмах и устаревшее ПО.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-section">
+  <div class="cta-inner">
+    <p class="section-label">Что дальше?</p>
+    <h2>Проверь себя<br>и защитись</h2>
+    <p>Пройди тест из 10 вопросов или изучи правила безопасности — всё в одном месте.</p>
+    <div class="cta-btns">
+      <a href="quiz.html" class="btn btn-primary">🎯 Пройти тест</a>
+      <a href="tips.html" class="btn btn-outline">🔒 Советы по защите</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>Сделано в рамках проекта по информатике, 2025 &nbsp;·&nbsp; <span>КиберЩит</span> — знай угрозы, защити себя</p>
+</footer>
+
+<script>
+const observer = new IntersectionObserver(entries => { entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
