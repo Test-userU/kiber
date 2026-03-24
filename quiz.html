@@ -1,9 +1,10 @@
-[24.03.2026 21:18] ᅠㅤᅠㅤᅠㅤ ᅠㅤ ᅠㅤ: <!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <title>Тест — КиберЩит</title>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Onest:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -49,8 +50,8 @@ h1 { font-family: ‘Unbounded’, sans-serif; font-weight: 900; font-size: clam
 .quiz-option.correct { border-color: var(–success); background: rgba(0,201,122,0.08); color: var(–success); }
 .quiz-option.wrong { border-color: var(–error); background: rgba(255,60,110,0.08); color: var(–error); }
 
-.option-letter { width: 28px; height: 28px; border-radius: 8px; background: var(–border); color: var(–muted); font-family: ‘Unbounded’, sans-serif; font-size: 0.
-[24.03.2026 21:18] ᅠㅤᅠㅤᅠㅤ ᅠㅤ ᅠㅤ: 7rem; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.2s; }
+.
+[24.03.2026 21:44] ᅠㅤᅠㅤᅠㅤ ᅠㅤ ᅠㅤ: option-letter { width: 28px; height: 28px; border-radius: 8px; background: var(–border); color: var(–muted); font-family: ‘Unbounded’, sans-serif; font-size: 0.7rem; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.2s; }
 .quiz-option.correct .option-letter { background: var(–success); color: #000; }
 .quiz-option.wrong .option-letter { background: var(–error); color: #fff; }
 
@@ -110,10 +111,10 @@ footer span { color: var(–accent); }
     <div id="quizCard">
       <div class="quiz-meta">
         <span class="quiz-counter" id="quizCounter">Вопрос 1 / 10</span>
-        <span class="quiz-score-badge">⚡ Очки: <span id="scoreDisplay">0</span></span>
+[24.03.2026 21:44] ᅠㅤᅠㅤᅠㅤ ᅠㅤ ᅠㅤ: <span class="quiz-score-badge">⚡ Очки: <span id="scoreDisplay">0</span></span>
       </div>
       <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="progressFill" style="width:10%"></div></div>
-[24.03.2026 21:18] ᅠㅤᅠㅤᅠㅤ ᅠㅤ ᅠㅤ: <div class="quiz-card">
+      <div class="quiz-card">
         <div class="quiz-question" id="quizQuestion"></div>
         <div class="quiz-hint" id="quizHint"></div>
         <div class="quiz-options" id="quizOptions"></div>
@@ -146,8 +147,8 @@ const questions = [
   { q: "Что такое двухфакторная аутентификация (2FA)?", hint: "💡 «Двух-факторная» — значит нужно два подтверждения", options: ["Система, при которой нужно ввести пароль дважды","Дополнительный код из СМС или приложения при входе помимо пароля","Особый антивирус с двойной защитой","Пароль из двух слов"], correct: 1, explanation: "✅ Правильно! 2FA — это второй уровень защиты. Даже если хакер узнает твой пароль, без кода из телефона он не сможет войти в аккаунт." },
   { q: "Ты подключился к бесплатному Wi-Fi в кафе. Что НЕ стоит делать?", hint: "💡 Открытые сети могут прослушиваться злоумышленниками", options: ["Читать новости","Входить в мобильное приложение банка и переводить деньги","Смотреть видео на YouTube","Искать информацию в браузере"], correct: 1, explanation: "✅ Правильно! В публичных сетях Wi-Fi хакер может перехватить твой трафик. Никогда не используй банковские приложения и не вводи пароли в открытых сетях." },
   { q: "Тебе звонят с незнакомого номера. Человек говорит, что он сотрудник банка, и просит назвать код из СМС. Ты...", hint: "💡 Настоящие сотрудники банка никогда не...", options: ["Называешь код — вдруг действительно что-то случилось с картой","Просишь перезвонить позже","Кладёшь трубку и сам перезваниваешь в банк по номеру на карте","Даёшь только первые три цифры кода"], correct: 2, explanation: "✅ Правильно! Настоящий банк НИКОГДА не просит коды из СМС по телефону. Это главный признак мошенника. Всегда клади трубку и звони в банк самостоятельно." },
-  { q: "Твой друг прислал ссылку: «Скачай эту программу, она крутая!» Но ты не уверен в источнике. Что делать?", hint: "💡 Даже от друзей могут приходить заражённые ссылки", options: ["Скачать — ведь это твой друг, он не обманет","Уточнить у друга, что это за программа, и скачать только с официального сайта","Скачать и сразу запустить","Скачать, но не запускать до завтра"], correct: 1, explanation: "✅ Правильно! Аккаунт друга мог быть взломан, а ссылка — вредоносной.
-[24.03.2026 21:18] ᅠㅤᅠㅤᅠㅤ ᅠㅤ ᅠㅤ: Всегда скачивай программы только с официальных сайтов разработчиков." },
+  { q: "Твой друг прислал ссылку: «Скачай эту программу, она крутая!» Но ты не уверен в источнике.
+[24.03.2026 21:44] ᅠㅤᅠㅤᅠㅤ ᅠㅤ ᅠㅤ: Что делать?", hint: "💡 Даже от друзей могут приходить заражённые ссылки", options: ["Скачать — ведь это твой друг, он не обманет","Уточнить у друга, что это за программа, и скачать только с официального сайта","Скачать и сразу запустить","Скачать, но не запускать до завтра"], correct: 1, explanation: "✅ Правильно! Аккаунт друга мог быть взломан, а ссылка — вредоносной. Всегда скачивай программы только с официальных сайтов разработчиков." },
   { q: "Зачем регулярно обновлять операционную систему и приложения?", hint: "💡 Обновления — это не только новые функции", options: ["Чтобы получить новый дизайн","Потому что так требует закон","Обновления закрывают уязвимости, которые хакеры используют для взлома","Чтобы приложения работали быстрее"], correct: 2, explanation: "✅ Правильно! Большинство обновлений содержит патчи безопасности. Устаревшая система — это открытая дверь для атак." },
   { q: "Что такое фишинг?", hint: "💡 «Fishing» по-английски — рыбалка. Тебя «ловят на крючок»", options: ["Вирус, который замедляет компьютер","Атака через поддельные письма и сайты с целью кражи данных","Взлом пароля методом перебора","Кража данных через публичный Wi-Fi"], correct: 1, explanation: "✅ Правильно! Фишинг — создание поддельных писем или сайтов, чтобы обманом заставить тебя ввести логин, пароль или данные карты." },
   { q: "Ты нашёл на парковке флешку. Что лучше сделать?", hint: "💡 Злоумышленники специально оставляют такие «подарки»", options: ["Подключить к компьютеру и посмотреть, что внутри","Подключить на работе — там есть антивирус","Выбросить или сдать в бюро находок, но не подключать к своему устройству","Отформатировать и пользоваться"], correct: 2, explanation: "✅ Правильно! Это классическая атака «потерянная флешка». Злоумышленники оставляют заражённые носители — при подключении вредоносная программа запускается автоматически." },
@@ -163,6 +164,7 @@ function renderQuestion() {
   document.getElementById('scoreDisplay').textContent = score;
   document.getElementById('progressFill').style.width = ${(current / questions.length) * 100 + 10}%;
   document.getElementById('quizQuestion').textContent = q.q;
+  document.getElementById('quizHint').textContent = '';
   document.getElementById('quizHint').textContent = q.hint;
   const letters = ['A','B','C','D'];
   const optionsEl = document.getElementById('quizOptions');
@@ -191,7 +193,7 @@ function selectAnswer(idx, btn) {
     score++;
     document.getElementById('scoreDisplay').textContent = score;
     feedback.className = 'quiz-feedback correct-fb show';
-    feedback.innerHTML = q.explanation;
+[24.03.2026 21:44] ᅠㅤᅠㅤᅠㅤ ᅠㅤ ᅠㅤ: feedback.innerHTML = q.explanation;
     buttons[q.correct].classList.add('correct');
   } else {
     btn.classList.add('wrong');
@@ -199,8 +201,7 @@ function selectAnswer(idx, btn) {
     feedback.className = 'quiz-feedback wrong-fb show';
     feedback.innerHTML = ❌ Неправильно. <strong>${q.explanation.replace('✅ Правильно! ','')}</strong>;
   }
-  next.textContent = current < questions.
-[24.03.2026 21:18] ᅠㅤᅠㅤᅠㅤ ᅠㅤ ᅠㅤ: length - 1 ? 'Следующий вопрос →' : 'Узнать результат 🏁';
+  next.textContent = current < questions.length - 1 ? 'Следующий вопрос →' : 'Узнать результат 🏁';
   next.className = 'quiz-next show';
 }
 
